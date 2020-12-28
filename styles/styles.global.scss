@@ -3,15 +3,32 @@
 $main-dark: #18191e;
 $main-light: #dddddd;
 $main-font: "Work Sans", Helvetica, Arial, sans-serif;
+$body-padding: 0 50px;
+$header-height: 100px;
+
+@mixin mid-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 html,
 body {
-	padding: 0;
-	margin: 0;
 	font-family: $main-font;
 	background: $main-dark;
 	color: $main-light;
 	font-size: 20px;
+}
+
+body {
+	margin: auto;
+	max-width: 1440px;
 }
 
 a {
@@ -21,4 +38,81 @@ a {
 
 * {
 	box-sizing: border-box;
+}
+
+header {
+	@include mid-flex;
+	width: 100%;
+	position: fixed;
+	height: $header-height;
+	max-width: 1440px;
+}
+
+nav {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: $body-padding;
+
+	ul {
+		@include mid-flex;
+		li {
+			list-style: none;
+			margin-left: 4rem;
+			a {
+				font-size: 0.9rem;
+			}
+		}
+	}
+}
+
+.page {
+	padding: $body-padding;
+	height: 100vh;
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	font-weight: 700;
+	font-family: $main-font;
+	color: $main-dark;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.button-secondary {
+	background-color: transparent;
+	border: 1px solid $main-light;
+	color: $main-light;
+}
+
+.hero {
+	height: 100%;
+	padding: $header-height 0px;
+	@include mid-flex;
+
+	.content {
+		@include mid-flex;
+		flex-direction: column;
+		max-width: 400px;
+
+		h1 {
+			text-align: center;
+			font-weight: 900;
+		}
+
+		.cta {
+			margin-top: 2rem;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 1rem;
+
+			// button {
+			// 	margin: 0px 0.5rem;
+			// }
+		}
+	}
 }
