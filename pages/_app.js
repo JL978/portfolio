@@ -1,11 +1,11 @@
 import "../styles/styles.global.scss";
-import NavBar from "./components/NavBar";
+import PageWrapper from "./components/PageWrapper";
 
 function MyApp({ Component, pageProps }) {
 	return (
-		<NavBar>
+		<PageWrapper>
 			<Component {...pageProps} />
-		</NavBar>
+		</PageWrapper>
 	);
 }
 
