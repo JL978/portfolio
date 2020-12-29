@@ -6,17 +6,17 @@ export default function Socials() {
 		<div className="socials">
 			<ul>
 				<li>
-					<a>
+					<a href="#github">
 						<Icon name="github" />
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="#li">
 						<Icon name="LinkedIn2" />
 					</a>
 				</li>
 				<li>
-					<a>
+					<a href="#email">
 						<Icon name="email" />
 					</a>
 				</li>

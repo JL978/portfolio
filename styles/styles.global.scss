@@ -132,21 +132,57 @@ button {
 	bottom: 3rem;
 	max-width: $width-max;
 	justify-content: start;
+	padding: $body-padding;
+	z-index: 4;
 
 	ul {
-		padding: $body-padding;
-
 		li {
 			margin-bottom: 1.8rem;
 		}
+	}
+}
 
-		// &::after {
-		// 	content: "";
-		// 	display: block;
-		// 	width: 1px;
-		// 	height: 70px;
-		// 	margin: 0px auto;
-		// 	background-color: $main-light;
-		// }
+.scroll {
+	@include mid-flex;
+	width: 100%;
+	position: fixed;
+	bottom: 5.2rem;
+	max-width: $width-max;
+	justify-content: flex-end;
+	padding: $body-padding;
+	z-index: 3;
+
+	div {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: column;
+	}
+	p {
+		user-select: none;
+		line-height: 0.8;
+		transform-origin: right top;
+		transform: rotate(90deg);
+	}
+
+	.line {
+		display: block;
+		width: 1px;
+		height: 3rem;
+		margin: 0px 0.45rem 0px auto;
+		background-color: $main-light;
+	}
+}
+
+.watermark {
+	@include mid-flex;
+	width: 100%;
+	position: fixed;
+	bottom: 1rem;
+	max-width: $width-max;
+
+	h1 {
+		user-select: none;
+		font-size: 250px;
+		opacity: 5%;
 	}
 }
