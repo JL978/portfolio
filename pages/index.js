@@ -1,6 +1,9 @@
 import FeaturedProject from "./components/FeaturedProject";
+import { useRouter } from "next/router";
 
 export default function Home() {
+	const router = useRouter();
+
 	return (
 		<>
 			<div className="page">
@@ -8,13 +11,18 @@ export default function Home() {
 					<div className="content">
 						<h1>Making web apps from nanoparticles</h1>
 						<div className="cta">
-							<button>How?</button>
-							<button className="button-secondary">Contact me</button>
+							<button onClick={() => router.push("/#about")}>How?</button>
+							<button
+								onClick={() => router.push("/#contact")}
+								className="button-secondary"
+							>
+								Contact me
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className="page">
+			<div className="page" id="about">
 				<div className="about">
 					<div className="info">
 						<h3>about me</h3>
@@ -45,7 +53,7 @@ export default function Home() {
 				</div>
 			</div>
 
-			<div className="page">
+			<div className="page" id="projects">
 				<FeaturedProject
 					title="Spotify Web Player Clone"
 					descriptions={[
@@ -62,7 +70,7 @@ export default function Home() {
 				/>
 			</div>
 
-			<div className="page">
+			<div className="page" id="contact">
 				<div className="contact">
 					<div className="info">
 						<h2>Contacts</h2>

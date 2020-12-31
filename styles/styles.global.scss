@@ -25,6 +25,7 @@ ul {
 
 html,
 body {
+	scroll-behavior: smooth;
 	font-family: $main-font;
 	background: $main-dark;
 	color: $main-light;
