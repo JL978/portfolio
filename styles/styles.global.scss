@@ -26,15 +26,12 @@ ul {
 html,
 body {
 	scroll-behavior: smooth;
+	margin: auto;
+	max-width: $width-max;
 	font-family: $main-font;
 	background: $main-dark;
 	color: $main-light;
 	font-size: 20px;
-}
-
-body {
-	margin: auto;
-	max-width: $width-max;
 }
 
 a {
@@ -76,9 +73,26 @@ nav {
 	}
 }
 
+// .pageContainer {
+// 	margin: auto;
+// 	max-width: $width-max;
+// 	scroll-behavior: smooth;
+// 	scroll-snap-type: y mandatory;
+// 	max-height: 100vh;
+// 	overflow-y: scroll;
+
+// 	&::-webkit-scrollbar {
+// 		display: none;
+// 	}
+
+// 	-ms-overflow-style: none; /* IE and Edge */
+// 	scrollbar-width: none; /* Firefox */
+// }
+
 .page {
 	padding: $body-padding;
 	height: 100vh;
+	scroll-snap-align: center;
 }
 
 button {

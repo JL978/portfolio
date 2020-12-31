@@ -14,23 +14,23 @@ export default function FeaturedProject({
 				<h3>Featured Project</h3>
 				<div className="header">
 					<h2>{title}</h2>
-					{links && links.map((link) => <div>{link.title}</div>)}
+					{links && links.map((link, idx) => <div key={idx}>{link.title}</div>)}
 				</div>
 
-				{descriptions.map((paragraph) => (
-					<p>{paragraph}</p>
+				{descriptions.map((paragraph, idx) => (
+					<p key={idx}>{paragraph}</p>
 				))}
 
 				<h5>Features:</h5>
 				<ul>
-					{features.map((feature) => (
-						<li>{feature}</li>
+					{features.map((feature, idx) => (
+						<li key={idx}>{feature}</li>
 					))}
 				</ul>
 
 				<div className="tags">
-					{tags.map((tag) => (
-						<div>{tag}</div>
+					{tags.map((tag, idx) => (
+						<div key={idx}>{tag}</div>
 					))}
 				</div>
 			</div>
