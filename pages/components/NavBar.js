@@ -1,4 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadein = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			// delayChildren: 0.3,
+			staggerChildren: 0.1,
+		},
+	},
+};
+
+const down = {
+	hidden: { y: -20, opacity: 0 },
+	visible: { y: 0, opacity: 1 },
+};
 
 export default function NavBar() {
 	return (
@@ -6,21 +23,23 @@ export default function NavBar() {
 			<nav>
 				<div className="navLogo">
 					<a href="/">
-						<h1>JL</h1>
+						<motion.h1 initial="hidden" animate="visible" variants={fadein}>
+							JL
+						</motion.h1>
 					</a>
 				</div>
 
-				<ul>
-					<li>
+				<motion.ul initial="hidden" animate="visible" variants={fadein}>
+					<motion.li variants={down}>
 						<a href="#about">About</a>
-					</li>
-					<li>
+					</motion.li>
+					<motion.li variants={down}>
 						<a href="#projects">Project</a>
-					</li>
-					<li>
+					</motion.li>
+					<motion.li variants={down}>
 						<a href="#contact">Contact</a>
-					</li>
-				</ul>
+					</motion.li>
+				</motion.ul>
 			</nav>
 		</header>
 	);

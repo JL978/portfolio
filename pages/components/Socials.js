@@ -1,29 +1,45 @@
 import React from "react";
 import Icon from "./Icon";
+import { motion } from "framer-motion";
+
+const parent = {
+	hidden: { opacity: 1 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.1,
+		},
+	},
+};
+
+const child = {
+	hidden: { opacity: 0, x: -30 },
+	visible: { opacity: 1, x: 0 },
+};
 
 export default function Socials() {
 	return (
 		<div className="socials">
-			<ul>
-				<li>
+			<motion.ul initial="hidden" animate="visible" variants={parent}>
+				<motion.li variants={child}>
 					<a href="https://github.com/JL978" target="_blank">
 						<Icon name="github" />
 					</a>
-				</li>
-				<li>
+				</motion.li>
+				<motion.li variants={child}>
 					<a
 						href="https://www.linkedin.com/in/jimmy-lam-b3a678103/"
 						target="_blank"
 					>
 						<Icon name="LinkedIn2" />
 					</a>
-				</li>
-				<li>
+				</motion.li>
+				<motion.li variants={child}>
 					<a href="mailto:JimmyLam045@gmail.com">
 						<Icon name="email" />
 					</a>
-				</li>
-			</ul>
+				</motion.li>
+			</motion.ul>
 		</div>
 	);
 }

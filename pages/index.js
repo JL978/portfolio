@@ -1,27 +1,13 @@
 import FeaturedProject from "./components/FeaturedProject";
-import { useRouter } from "next/router";
+
 import Image from "next/image";
+import Hero from "./components/sections/Hero";
 
 export default function Home() {
-	const router = useRouter();
-
 	return (
 		<>
 			<div className="page">
-				<div className="hero">
-					<div className="content">
-						<h1>Making web apps from nanoparticles</h1>
-						<div className="cta">
-							<button onClick={() => router.push("/#about")}>How?</button>
-							<button
-								onClick={() => router.push("/#contact")}
-								className="button-secondary"
-							>
-								Contact me
-							</button>
-						</div>
-					</div>
-				</div>
+				<Hero />
 			</div>
 			<div className="page" id="about">
 				<div className="about">
@@ -47,7 +33,9 @@ export default function Home() {
 							such as React, Node.js, Angular, Express.js, Socket.io, etc.
 						</p>
 						<a href="#projects">
-							<b>Check out my projects</b>
+							<b>
+								Check out my projects <span>&#x2192;</span>
+							</b>
 						</a>
 					</div>
 					<div className="img">

@@ -117,8 +117,8 @@ button {
 	height: 100%;
 	padding: $header-height 0px;
 	@include mid-flex;
-
 	.content {
+		z-index: 6;
 		@include mid-flex;
 		flex-direction: column;
 		max-width: 400px;
@@ -248,6 +248,14 @@ button {
 
 		a {
 			font-size: 0.9rem;
+
+			&:hover {
+				b {
+					span {
+						margin-left: 0.5rem;
+					}
+				}
+			}
 		}
 	}
 
@@ -292,6 +300,7 @@ button {
 			border: 1px solid $main-light;
 			border-radius: 9999px;
 			user-select: none;
+			white-space: nowrap;
 		}
 	}
 }
