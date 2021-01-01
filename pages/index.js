@@ -1,5 +1,6 @@
 import FeaturedProject from "./components/FeaturedProject";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function Home() {
 	const router = useRouter();
@@ -37,7 +38,7 @@ export default function Home() {
 						<p>
 							That said, I discovered my love for programming during the very
 							same internship by building <b>my first program</b> and I now
-							dedicate my time self-learning and practicing all things web
+							dedicate my time self-learning and practicing full-stack web
 							development
 						</p>
 						<p>
@@ -49,7 +50,15 @@ export default function Home() {
 							<b>Check out my projects</b>
 						</a>
 					</div>
-					<div className="img"></div>
+					<div className="img">
+						<Image
+							src="/static/img/me.jpg"
+							width={644}
+							height={429}
+							layout="fixed"
+							quality={100}
+						/>
+					</div>
 				</div>
 			</div>
 
