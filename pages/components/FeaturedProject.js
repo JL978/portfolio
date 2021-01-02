@@ -1,4 +1,8 @@
 import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeInUp } from "./utils/animations/framer-defs";
+import useIntersectAnimation from "./hooks/useIntersectAnimation";
 
 export default function FeaturedProject({
 	title,
@@ -6,11 +10,18 @@ export default function FeaturedProject({
 	descriptions,
 	tags,
 	features,
-	image,
+	img,
 }) {
+	const [control, ref] = useIntersectAnimation();
+
 	return (
-		<div className="project">
-			<div className="info">
+		<div ref={ref} className="project">
+			<motion.div
+				className="info"
+				initial="hidden"
+				animate={control}
+				variants={fadeInUp}
+			>
 				<h3>Featured Project</h3>
 				<div className="header">
 					<h2>{title}</h2>
@@ -33,8 +44,21 @@ export default function FeaturedProject({
 						<div key={idx}>{tag}</div>
 					))}
 				</div>
-			</div>
-			<div className="img"></div>
+			</motion.div>
+			<motion.div
+				className="img"
+				initial="hidden"
+				animate={control}
+				variants={fadeInUp}
+			>
+				<Image
+					src={img}
+					width={644}
+					height={429}
+					layout="fixed"
+					quality={100}
+				/>
+			</motion.div>
 		</div>
 	);
 }

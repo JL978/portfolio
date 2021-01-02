@@ -1,31 +1,11 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-
-const titleTransition = {
-	hidden: { opacity: 0, x: -40 },
-	visible: {
-		opacity: 1,
-		x: 0,
-	},
-};
-
-const ctaTransition = {
-	hidden: { opacity: 0, scale: 0 },
-	visible: {
-		opacity: 1,
-		scale: 1,
-		transition: {
-			delayChildren: 0.3,
-			staggerChildren: 0.2,
-		},
-	},
-};
-
-const buttonTransition = {
-	hidden: { y: 20, opacity: 0 },
-	visible: { y: 0, opacity: 1 },
-};
+import {
+	fadeInUp,
+	fadeInRight,
+	childrenStaggerDelay,
+} from "../utils/animations/framer-defs";
 
 export default function Hero() {
 	const router = useRouter();
@@ -33,27 +13,23 @@ export default function Hero() {
 	return (
 		<div className="hero">
 			<div className="content">
-				<motion.h1
-					initial="hidden"
-					animate="visible"
-					variants={titleTransition}
-				>
+				<motion.h1 initial="hidden" animate="visible" variants={fadeInRight}>
 					Making web apps from nanoparticles
 				</motion.h1>
 				<motion.div
 					initial="hidden"
 					animate="visible"
 					className="cta"
-					variants={ctaTransition}
+					variants={childrenStaggerDelay}
 				>
 					<motion.button
-						variants={buttonTransition}
+						variants={fadeInUp}
 						onClick={() => router.push("/#about")}
 					>
 						How?
 					</motion.button>
 					<motion.button
-						variants={buttonTransition}
+						variants={fadeInUp}
 						onClick={() => router.push("/#contact")}
 						className="button-secondary"
 					>

@@ -1,21 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const fadein = {
-	hidden: { opacity: 0 },
-	visible: {
-		opacity: 1,
-		transition: {
-			// delayChildren: 0.3,
-			staggerChildren: 0.1,
-		},
-	},
-};
-
-const down = {
-	hidden: { y: -20, opacity: 0 },
-	visible: { y: 0, opacity: 1 },
-};
+import {
+	fadeIn,
+	fadeInDown,
+	childrenStagger,
+} from "./utils/animations/framer-defs";
 
 export default function NavBar() {
 	return (
@@ -23,20 +12,24 @@ export default function NavBar() {
 			<nav>
 				<div className="navLogo">
 					<a href="/">
-						<motion.h1 initial="hidden" animate="visible" variants={fadein}>
+						<motion.h1 initial="hidden" animate="visible" variants={fadeIn}>
 							JL
 						</motion.h1>
 					</a>
 				</div>
 
-				<motion.ul initial="hidden" animate="visible" variants={fadein}>
-					<motion.li variants={down}>
+				<motion.ul
+					initial="hidden"
+					animate="visible"
+					variants={childrenStagger}
+				>
+					<motion.li variants={fadeInDown}>
 						<a href="#about">About</a>
 					</motion.li>
-					<motion.li variants={down}>
+					<motion.li variants={fadeInDown}>
 						<a href="#projects">Project</a>
 					</motion.li>
-					<motion.li variants={down}>
+					<motion.li variants={fadeInDown}>
 						<a href="#contact">Contact</a>
 					</motion.li>
 				</motion.ul>

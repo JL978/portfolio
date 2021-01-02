@@ -1,17 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const fadein = {
-	hidden: { opacity: 0 },
-	visible: {
-		opacity: 1,
-	},
-};
+import { fadeInUp } from "../utils/animations/framer-defs";
 
 export default function ScrollDecoration() {
 	return (
 		<div className="scroll">
-			<motion.div initial="hidden" animate="visible" variants={fadein}>
+			<motion.div initial="hidden" animate="visible" variants={fadeInUp}>
 				<p>Scroll</p>
 				<div className="line"></div>
 			</motion.div>
