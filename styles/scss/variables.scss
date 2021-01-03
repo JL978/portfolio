@@ -1,12 +1,7 @@
 $main-dark: #18191e;
 $main-light: #dddddd;
 $main-font: "Work Sans", Helvetica, Arial, sans-serif;
-$body-padding: 0 20px;
+$body-padding-narrow: 0 20px;
+$body-padding-wide: 0 50px;
 $header-height: 100px;
 $width-max: 1440px;
-
-@media (min-width: 600px) {
-	$body-padding: 0 50px;
-	$header-height: 100px;
-	$width-max: 1440px;
-}

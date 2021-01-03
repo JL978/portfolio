@@ -25,27 +25,31 @@
 	}
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 	.hero {
-		height: 100%;
-		padding: $header-height 0px;
-		@include mid-flex;
 		.content {
-			z-index: 6;
-			@include mid-flex;
-			flex-direction: column;
-			max-width: 400px;
-
 			h1 {
-				text-align: center;
-				font-weight: 900;
+				font-size: 1.5rem;
+			}
+
+			.cta {
+				margin-top: 1.7rem;
+				grid-gap: 1rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.hero {
+		.content {
+			h1 {
+				font-size: 2rem;
 			}
 
 			.cta {
 				margin-top: 2rem;
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				grid-gap: 1rem;
+				grid-gap: 1.3rem;
 			}
 		}
 	}

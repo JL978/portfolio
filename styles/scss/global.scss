@@ -32,7 +32,7 @@ button {
 	padding: 8px 10px;
 	border: none;
 	font-weight: 700;
-	font-size: 0.65rem;
+	font-size: 0.55rem;
 	font-family: $main-font;
 	color: $main-dark;
 
@@ -41,16 +41,10 @@ button {
 	}
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 	button {
 		padding: 10px 20px;
 		border: none;
-		font-weight: 700;
-		font-family: $main-font;
-		color: $main-dark;
-
-		&:hover {
-			cursor: pointer;
-		}
+		font-size: 0.65rem;
 	}
 }

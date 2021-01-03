@@ -5,9 +5,8 @@
 }
 
 .page {
-	padding: $body-padding;
+	padding: $body-padding-narrow;
 	min-height: 100vh;
-	scroll-snap-align: center;
 }
 
 .button-secondary {
@@ -17,12 +16,11 @@
 	font-weight: 500;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 	.page {
-		padding: $body-padding;
+		padding: $body-padding-wide;
 		height: 100vh;
 		min-height: 700px;
-		scroll-snap-align: center;
 	}
 
 	.button-secondary {

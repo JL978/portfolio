@@ -6,20 +6,74 @@ header {
 	height: $header-height;
 	max-width: $width-max;
 	background-color: $main-dark;
+
+	h1 {
+		font-size: 1.5rem;
+		text-align: center;
+		margin-bottom: 0.5rem;
+	}
 }
 
 nav {
 	display: flex;
 	width: 100%;
-	justify-content: space-between;
-	padding: $body-padding;
+	justify-content: center;
+	flex-direction: column;
+	padding: $body-padding-narrow;
 
 	ul {
 		@include mid-flex;
+		justify-content: space-around;
 		li {
-			margin-left: 4rem;
 			a {
-				font-size: 0.9rem;
+				font-size: 0.75rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 350px) {
+	header {
+		h1 {
+			margin: 0;
+		}
+	}
+	nav {
+		flex-direction: row;
+		justify-content: space-between;
+
+		ul {
+			li {
+				margin-left: 2rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 450px) {
+	nav {
+		ul {
+			li {
+				margin-left: 3rem;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 700px) {
+	nav {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: $body-padding-wide;
+
+		ul {
+			@include mid-flex;
+			li {
+				margin-left: 4rem;
+				a {
+					font-size: 0.85rem;
+				}
 			}
 		}
 	}
