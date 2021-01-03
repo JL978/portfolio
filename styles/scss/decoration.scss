@@ -1,0 +1,97 @@
+.socials {
+	@include mid-flex;
+	width: 100%;
+	max-width: $width-max;
+	padding: $body-padding;
+	z-index: 4;
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		li {
+			margin: 1.2rem;
+		}
+	}
+}
+
+.scroll {
+	display: none;
+}
+
+.watermark {
+	@include mid-flex;
+	width: 100%;
+	position: fixed;
+	bottom: 1rem;
+	max-width: $width-max;
+
+	h1 {
+		user-select: none;
+		font-size: clamp(52px, 17vw, 250px);
+		opacity: 5%;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.socials {
+		@include mid-flex;
+		width: 100%;
+		position: fixed;
+		bottom: 3rem;
+		max-width: $width-max;
+		justify-content: flex-start;
+		padding: $body-padding;
+		z-index: 4;
+
+		ul {
+			li {
+				margin-bottom: 1.8rem;
+			}
+		}
+	}
+
+	.scroll {
+		@include mid-flex;
+		width: 100%;
+		position: fixed;
+		bottom: 5.2rem;
+		max-width: $width-max;
+		justify-content: flex-end;
+		padding: $body-padding;
+		z-index: 3;
+
+		div {
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
+		p {
+			user-select: none;
+			line-height: 0.8;
+			transform-origin: right top;
+			transform: rotate(90deg);
+		}
+
+		.line {
+			display: block;
+			width: 1px;
+			height: 3rem;
+			margin: 0px 0.45rem 0px auto;
+			background-color: $main-light;
+		}
+	}
+
+	.watermark {
+		@include mid-flex;
+		width: 100%;
+		position: fixed;
+		bottom: 1rem;
+		max-width: $width-max;
+
+		h1 {
+			user-select: none;
+			font-size: 250px;
+			opacity: 5%;
+		}
+	}
+}

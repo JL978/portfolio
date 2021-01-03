@@ -1,0 +1,26 @@
+header {
+	z-index: 11;
+	@include mid-flex;
+	width: 100%;
+	position: fixed;
+	height: $header-height;
+	max-width: $width-max;
+	background-color: $main-dark;
+}
+
+nav {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: $body-padding;
+
+	ul {
+		@include mid-flex;
+		li {
+			margin-left: 4rem;
+			a {
+				font-size: 0.9rem;
+			}
+		}
+	}
+}

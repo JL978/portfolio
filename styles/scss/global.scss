@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	margin: auto;
+	max-width: $width-max;
+	font-family: $main-font;
+	background: $main-dark;
+	color: $main-light;
+	font-size: 20px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	padding: 8px 10px;
+	border: none;
+	font-weight: 700;
+	font-size: 0.65rem;
+	font-family: $main-font;
+	color: $main-dark;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	button {
+		padding: 10px 20px;
+		border: none;
+		font-weight: 700;
+		font-family: $main-font;
+		color: $main-dark;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

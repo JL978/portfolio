@@ -1,0 +1,33 @@
+@mixin mid-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page {
+	padding: $body-padding;
+	min-height: 100vh;
+	scroll-snap-align: center;
+}
+
+.button-secondary {
+	background-color: transparent;
+	border: 1px solid $main-light;
+	color: $main-light;
+	font-weight: 500;
+}
+
+@media only screen and (min-width: 600px) {
+	.page {
+		padding: $body-padding;
+		height: 100vh;
+		min-height: 700px;
+		scroll-snap-align: center;
+	}
+
+	.button-secondary {
+		background-color: transparent;
+		border: 1px solid $main-light;
+		color: $main-light;
+	}
+}
