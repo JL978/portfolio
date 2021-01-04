@@ -16,7 +16,7 @@ export default function About() {
 				variants={fadeInRight}
 			>
 				<h3>about me</h3>
-				<h2>Can I really make web apps out of nanoparticles?</h2>
+				<h2>Can you really make web apps out of nanoparticles?</h2>
 				<p>Not really no, sorry for the clickbait title :)</p>
 				<p>
 					Although I did go to the University of Toronto for 5 years to be a
@@ -32,7 +32,7 @@ export default function About() {
 				<p>
 					I believe project-based learning is the fastest way to learn,
 					therefore I have wasted no time building apps using techonolgies such
-					as React, Node.js, Angular, Express.js, Socket.io, etc.
+					as React, Node.js, Express.js, Socket.io, etc.
 				</p>
 				<a href="#projects">
 					<b>
@@ -50,7 +50,7 @@ export default function About() {
 					src="/static/img/me.jpg"
 					width={644}
 					height={429}
-					layout="fixed"
+					layout="responsive"
 					quality={100}
 				/>
 			</motion.div>
