@@ -9,6 +9,11 @@
 		flex-direction: row;
 		li {
 			margin: 1.2rem;
+			color: $darken-light;
+
+			&:hover {
+				color: $main-light;
+			}
 		}
 	}
 }
@@ -49,6 +54,7 @@
 
 	.scroll {
 		@include mid-flex;
+		color: $darken-light;
 		width: 100%;
 		position: fixed;
 		bottom: 5.2rem;
@@ -74,7 +80,7 @@
 			width: 1px;
 			height: 3rem;
 			margin: 0px 0.45rem 0px auto;
-			background-color: $main-light;
+			background-color: $darken-light;
 		}
 	}
 }

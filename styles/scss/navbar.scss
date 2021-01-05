@@ -26,7 +26,13 @@ nav {
 		justify-content: space-around;
 		li {
 			a {
+				color: $darken-light;
 				font-size: 0.75rem;
+
+				&:hover {
+					color: $main-light;
+					font-weight: 700;
+				}
 			}
 		}
 	}

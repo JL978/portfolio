@@ -3,6 +3,9 @@ import Email from "./Email";
 import LinkedIn1 from "./LinkedIn1";
 import LinkedIn2 from "./LinkedIn2";
 import Github from "./Github";
+import Node from "./Node";
+import ReactIcon from "./ReactIcon";
+import Spotify from "./Spotify";
 
 export default function Icon({ name }) {
 	switch (name) {
@@ -14,6 +17,12 @@ export default function Icon({ name }) {
 			return <LinkedIn1 />;
 		case "github":
 			return <Github />;
+		case "node":
+			return <Node />;
+		case "spotify":
+			return <Spotify />;
+		case "react":
+			return <ReactIcon />;
 		default:
 			return null;
 	}
