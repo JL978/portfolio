@@ -6,6 +6,7 @@ import Github from "./Github";
 import Node from "./Node";
 import ReactIcon from "./ReactIcon";
 import Spotify from "./Spotify";
+import X from "./X";
 
 export default function Icon({ name }) {
 	switch (name) {
@@ -23,6 +24,8 @@ export default function Icon({ name }) {
 			return <Spotify />;
 		case "react":
 			return <ReactIcon />;
+		case "x":
+			return <X />;
 		default:
 			return null;
 	}

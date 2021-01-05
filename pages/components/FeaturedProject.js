@@ -5,6 +5,7 @@ import { fadeInUp } from "./utils/animations/framer-defs";
 import useIntersectAnimation from "./hooks/useIntersectAnimation";
 import ProjectCard from "./ProjectCard";
 import Modal from "react-modal";
+import ProjectModal from "./ProjectModal";
 Modal.setAppElement("#__next");
 
 export default function FeaturedProject({
@@ -55,7 +56,7 @@ export default function FeaturedProject({
 				overlayClassName="modalOverlay"
 				closeTimeoutMS={200}
 			>
-				hello
+				<ProjectModal closeModal={closeModal} />
 			</Modal>
 			{/* <div className="header">
 					<h2>{title}</h2>
