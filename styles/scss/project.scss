@@ -24,6 +24,31 @@
 	background-color: rgba(24, 25, 30, 0.7);
 }
 
+.ReactModal__Content {
+	transform: scale(0);
+	transition: transform 200ms ease-in-out;
+}
+
+.ReactModal__Content--after-open {
+	transform: scale(1);
+}
+.ReactModal__Content--before-close {
+	transform: scale(0);
+}
+
+.ReactModal__Overlay {
+	opacity: 0;
+	transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+	opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+	opacity: 0;
+}
+
 .project {
 	height: 100%;
 	padding: $header-height 100px;

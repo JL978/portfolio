@@ -7,27 +7,6 @@ import ProjectCard from "./ProjectCard";
 import Modal from "react-modal";
 Modal.setAppElement("#__next");
 
-const modalStyle = {
-	content: {
-		position: "absolute",
-		top: "40px",
-		left: "40px",
-		right: "40px",
-		bottom: "40px",
-		border: "1px solid #ccc",
-		background: "#fff",
-		overflow: "auto",
-		WebkitOverflowScrolling: "touch",
-		borderRadius: "4px",
-		outline: "none",
-		padding: "20px",
-		zIndex: "1000",
-	},
-	overlay: {
-		zIndex: "1000",
-	},
-};
-
 export default function FeaturedProject({
 	title,
 	links,
@@ -74,7 +53,10 @@ export default function FeaturedProject({
 				contentLabel="Example Modal"
 				className="modal"
 				overlayClassName="modalOverlay"
-			></Modal>
+				closeTimeoutMS={200}
+			>
+				hello
+			</Modal>
 			{/* <div className="header">
 					<h2>{title}</h2>
 					{links && links.map((link, idx) => <div key={idx}>{link.title}</div>)}
