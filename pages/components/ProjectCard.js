@@ -9,8 +9,8 @@ export default function ProjectCard({ title, description, icons, openModal }) {
 				<h3>{title}</h3>
 				<p>{description}</p>
 				<div className="icons">
-					{icons.map((icon) => (
-						<Icon name={icon} />
+					{icons.map((icon, idx) => (
+						<Icon key={idx} name={icon} />
 					))}
 				</div>
 			</div>

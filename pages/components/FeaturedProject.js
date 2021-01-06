@@ -28,13 +28,6 @@ export default function FeaturedProject({
 
 	return (
 		<div className="project">
-			{/* <motion.div
-				className="info"
-				initial="hidden"
-				animate={control}
-				variants={fadeInUp}
-			> */}
-
 			<h2>Featured Projects</h2>
 			<div className="projectGrid">
 				{[0, 1, 2].map((i) => (
@@ -50,50 +43,27 @@ export default function FeaturedProject({
 			<Modal
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
-				// style={modalStyle}
 				contentLabel="Example Modal"
 				className="modal"
 				overlayClassName="modalOverlay"
 				closeTimeoutMS={200}
 			>
-				<ProjectModal closeModal={closeModal} />
-			</Modal>
-			{/* <div className="header">
-					<h2>{title}</h2>
-					{links && links.map((link, idx) => <div key={idx}>{link.title}</div>)}
-				</div>
-
-				{descriptions.map((paragraph, idx) => (
-					<p key={idx}>{paragraph}</p>
-				))}
-
-				<h5>Features:</h5>
-				<ul>
-					{features.map((feature, idx) => (
-						<li key={idx}>{feature}</li>
-					))}
-				</ul>
-
-				<div className="tags">
-					{tags.map((tag, idx) => (
-						<div key={idx}>{tag}</div>
-					))}
-				</div>
-			</motion.div>
-			<motion.div
-				className="img"
-				initial="hidden"
-				animate={control}
-				variants={fadeInUp}
-			>
-				<Image
-					src={img}
-					width={644}
-					height={429}
-					layout="fixed"
-					quality={100}
+				<ProjectModal
+					closeModal={closeModal}
+					title="Spotify web player clone"
+					descriptions={[
+						"My very first full-featured web application. A full clone of the Spotify web music player that I created to teach myself the basics of web application development. The app consumes the official Spotify API",
+						"All features were built from scratch using the create-react-app cli for the frontend and Node.js for the backend",
+					]}
+					features={[
+						"Infinite scrolling",
+						"Live search",
+						"Authentication/Authorization",
+						"Music player controls",
+					]}
+					tags={["React", "axios", "Node.js", "Express", "react-router"]}
 				/>
-			</motion.div> */}
+			</Modal>
 		</div>
 	);
 }

@@ -27,7 +27,7 @@ export default function NavBar() {
 						<a href="#about">About</a>
 					</motion.li>
 					<motion.li variants={fadeInDown}>
-						<a href="#projects">Project</a>
+						<a href="#projects">Projects</a>
 					</motion.li>
 					<motion.li variants={fadeInDown}>
 						<a href="#contact">Contact</a>
