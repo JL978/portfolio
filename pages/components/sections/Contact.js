@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeInLeft, fadeInRight } from "../utils/animations/framer-defs";
 import useIntersectAnimation from "../hooks/useIntersectAnimation";
+import formik, { Formik, Field, Form, ErrorMessage } from "formik";
+import * as yup from "yup";
+
+const schema = yup.object({
+	name: yup.string().required(),
+	email: yup.string().email().required(),
+	message: yup.string().required(),
+});
 
 export default function Contact() {
 	const [control, ref] = useIntersectAnimation();
+
+	function sendMessage(value, { setSubmitting, resetForm }) {
+		console.log(value);
+		setTimeout(() => setSubmitting(false), 2000);
+		resetForm();
+	}
 
 	return (
 		<div ref={ref} className="contact">
@@ -32,13 +46,57 @@ export default function Contact() {
 				animate={control}
 				variants={fadeInLeft}
 			>
-				<form>
-					<h2>Leave a message</h2>
-					<input type="text" id="name" placeholder="Your name"></input>
-					<input type="text" id="email" placeholder="Your email"></input>
-					<textarea placeholder="Your message"></textarea>
-					<input type="submit" value="send message"></input>
-				</form>
+				<Formik
+					initialValues={{ name: "", email: "", message: "" }}
+					validationSchema={schema}
+					onSubmit={sendMessage}
+				>
+					{({ isSubmitting, handleSubmit }) => (
+						<Form onSubmit={handleSubmit}>
+							<h2>Leave a message</h2>
+							<ErrorMessage
+								name="name"
+								style={{
+									fontSize: "0.7rem",
+									fontStyle: "italic",
+									color: "#ff5252",
+								}}
+								component="div"
+							/>
+							<Field type="text" name="name" placeholder="Your name"></Field>
+							<ErrorMessage
+								name="email"
+								style={{
+									fontSize: "0.7rem",
+									fontStyle: "italic",
+									color: "#ff5252",
+								}}
+								component="div"
+							/>
+							<Field type="text" name="email" placeholder="Your email"></Field>
+							<ErrorMessage
+								name="message"
+								style={{
+									fontSize: "0.7rem",
+									fontStyle: "italic",
+									color: "#ff5252",
+								}}
+								component="div"
+							/>
+							<Field
+								type="text"
+								placeholder="Your message"
+								name="message"
+								component="textarea"
+							></Field>
+							<input
+								type="submit"
+								value="send message"
+								disabled={isSubmitting}
+							></input>
+						</Form>
+					)}
+				</Formik>
 			</motion.div>
 		</div>
 	);
