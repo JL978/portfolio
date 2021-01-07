@@ -6,7 +6,8 @@
 
 .page {
 	padding: $body-padding-narrow;
-	min-height: 100vh;
+	// height: 100vh;
+	min-height: 750px;
 }
 
 .button-secondary {
@@ -20,7 +21,10 @@
 	.page {
 		padding: $body-padding-wide;
 		height: 100vh;
-		min-height: 700px;
+	}
+
+	.page-tall {
+		height: auto;
 	}
 
 	.button-secondary {
@@ -29,3 +33,9 @@
 		color: $main-light;
 	}
 }
+// @media only screen and (min-width: 800px) {
+// 	.page {
+// 		height: 100vh;
+// 		min-height: 100%;
+// 	}
+// }

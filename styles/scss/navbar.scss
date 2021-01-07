@@ -20,6 +20,7 @@ nav {
 	justify-content: center;
 	flex-direction: column;
 	padding: $body-padding-narrow;
+	text-align: center;
 
 	ul {
 		@include mid-flex;

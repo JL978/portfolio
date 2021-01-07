@@ -13,7 +13,7 @@ export default function Home() {
 				<About />
 			</section>
 
-			<section className="page" id="projects">
+			<section className="page page-tall" id="projects">
 				<FeaturedProject
 					title="Spotify Web Player Clone"
 					descriptions={[
