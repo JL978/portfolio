@@ -33,6 +33,12 @@
 		color: $main-light;
 	}
 }
+
+@media only screen and (min-width: 1000px) {
+	.page-tall {
+		height: 100vh;
+	}
+}
 // @media only screen and (min-width: 800px) {
 // 	.page {
 // 		height: 100vh;
