@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { fadeInLeft, fadeInRight } from "../utils/animations/framer-defs";
 import useIntersectAnimation from "../hooks/useIntersectAnimation";
-import formik, { Formik, Field, Form, ErrorMessage } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as yup from "yup";
+import axios from "axios";
 
 const schema = yup.object({
 	name: yup.string().required(),
@@ -14,10 +15,19 @@ const schema = yup.object({
 export default function Contact() {
 	const [control, ref] = useIntersectAnimation();
 
-	function sendMessage(value, { setSubmitting, resetForm }) {
-		console.log(value);
-		setTimeout(() => setSubmitting(false), 2000);
-		resetForm();
+	async function sendMessage(value, { setSubmitting, resetForm }) {
+		try {
+			await axios({
+				method: "POST",
+				url: "http://localhost:4200/message",
+				data: value,
+				withCredentials: true,
+			});
+			setSubmitting(false);
+			resetForm();
+		} catch (err) {
+			console.log(err);
+		}
 	}
 
 	return (
