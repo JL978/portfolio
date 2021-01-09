@@ -1,6 +1,5 @@
-export default projectDescriptions = [
-	{
-		id: "spotify",
+const projectDescriptions = {
+	spotify: {
 		title: "Spotify web player clone",
 		descriptions: [
 			"My very first full-featured web application. A full clone of the Spotify web music player that I created to teach myself the basics of web application development",
@@ -15,8 +14,7 @@ export default projectDescriptions = [
 		],
 		tags: ["React", "axios", "Node.js", "Express", "react-router"],
 	},
-	{
-		id: "ttt",
+	ttt: {
 		title: "Multiplpayer tic-tac-toe game",
 		descriptions: [
 			"A multiplayer game that let users play tic-tac-toe games together",
@@ -30,9 +28,8 @@ export default projectDescriptions = [
 		],
 		tags: ["React", "socket.io", "Node.js", "react-router"],
 	},
-	{
-		id: "shopify",
-		title: "Shopify URL generator and shortener",
+	shopify: {
+		title: "Shopify URL generator and shortener*",
 		descriptions: [
 			"A Shopify integrated app that lets the user generate a UTM tracking link for a product. The generated link is then shortened when saved for better user experience",
 			"* Work in progress",
@@ -44,4 +41,6 @@ export default projectDescriptions = [
 		],
 		tags: ["Next.js", "PostgreSQL", "Formik", "Koa.js"],
 	},
-];
+};
+
+export default projectDescriptions;
