@@ -12,16 +12,29 @@ const schema = yup.object({
 	message: yup.string().required(),
 });
 
+const errorStyle = {
+	fontSize: "0.7rem",
+	fontStyle: "italic",
+	color: "#ff5252",
+};
+
 export default function Contact() {
 	const [control, ref] = useIntersectAnimation();
 
 	async function sendMessage(value, { setSubmitting, resetForm }) {
+		const data = {
+			service_id: "service_tpacwo9",
+			template_id: "template_x88x1mn",
+			user_id: "user_TIAYWzPwLRc3K7NXARH4F",
+			template_params: value,
+		};
+
 		try {
 			await axios({
 				method: "POST",
-				url: "http://localhost:4200/message",
-				data: value,
-				withCredentials: true,
+				url: "https://api.emailjs.com/api/v1.0/email/send",
+				data,
+				// withCredentials: true,
 			});
 			setSubmitting(false);
 			resetForm();
@@ -64,35 +77,11 @@ export default function Contact() {
 					{({ isSubmitting, handleSubmit }) => (
 						<Form onSubmit={handleSubmit}>
 							<h2>Leave a message</h2>
-							<ErrorMessage
-								name="name"
-								style={{
-									fontSize: "0.7rem",
-									fontStyle: "italic",
-									color: "#ff5252",
-								}}
-								component="div"
-							/>
+							<ErrorMessage name="name" style={errorStyle} component="div" />
 							<Field type="text" name="name" placeholder="Your name"></Field>
-							<ErrorMessage
-								name="email"
-								style={{
-									fontSize: "0.7rem",
-									fontStyle: "italic",
-									color: "#ff5252",
-								}}
-								component="div"
-							/>
+							<ErrorMessage name="email" style={errorStyle} component="div" />
 							<Field type="text" name="email" placeholder="Your email"></Field>
-							<ErrorMessage
-								name="message"
-								style={{
-									fontSize: "0.7rem",
-									fontStyle: "italic",
-									color: "#ff5252",
-								}}
-								component="div"
-							/>
+							<ErrorMessage name="message" style={errorStyle} component="div" />
 							<Field
 								type="text"
 								placeholder="Your message"
