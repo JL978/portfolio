@@ -1,4 +1,4 @@
-export const cardDescriptions = [
+const cardDescriptions = [
 	{
 		id: "spotify",
 		title: "Spotify web player clone",
@@ -17,7 +17,9 @@ export const cardDescriptions = [
 		id: "shopify",
 		title: "Shopify URL shortener",
 		description:
-			"A full-featured clone of the Spotify music Web Player that consumes the official Spotify API",
-		icons: ["react", "postgres", "shopify"],
+			"An Shopify integrated app that generates and shorten tracking links",
+		icons: ["react", "postgres", "graphql"],
 	},
 ];
+
+export default cardDescriptions;

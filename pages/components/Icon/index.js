@@ -7,6 +7,9 @@ import Node from "./Node";
 import ReactIcon from "./ReactIcon";
 import Spotify from "./Spotify";
 import X from "./X";
+import Postgres from "./Postgres";
+import Socket from "./Socket";
+import Graph from "./Graph";
 
 export default function Icon({ name }) {
 	switch (name) {
@@ -26,6 +29,12 @@ export default function Icon({ name }) {
 			return <ReactIcon />;
 		case "x":
 			return <X />;
+		case "postgres":
+			return <Postgres />;
+		case "socket":
+			return <Socket />;
+		case "graphql":
+			return <Graph />;
 		default:
 			return null;
 	}

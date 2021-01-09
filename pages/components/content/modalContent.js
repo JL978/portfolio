@@ -1,4 +1,4 @@
-export const projectDescriptions = [
+export default projectDescriptions = [
 	{
 		id: "spotify",
 		title: "Spotify web player clone",

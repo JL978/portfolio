@@ -6,6 +6,8 @@ import useIntersectAnimation from "./hooks/useIntersectAnimation";
 import ProjectCard from "./ProjectCard";
 import Modal from "react-modal";
 import ProjectModal from "./ProjectModal";
+import cardDescriptions from "./content/cardContent";
+
 Modal.setAppElement("#__next");
 
 export default function FeaturedProject({
@@ -30,12 +32,12 @@ export default function FeaturedProject({
 		<div className="project">
 			<h2>Featured Projects</h2>
 			<div className="projectGrid">
-				{[0, 1, 2].map((i) => (
+				{cardDescriptions.map(({ title, description, icons }, idx) => (
 					<ProjectCard
-						key={i}
-						title="Spotify web player clone"
-						description="A full-featured clone of the Spotify music Web Player that consumes the official Spotify API"
-						icons={["react", "node", "spotify"]}
+						key={idx}
+						title={title}
+						description={description}
+						icons={icons}
 						openModal={openModal}
 					/>
 				))}

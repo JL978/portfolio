@@ -104,6 +104,8 @@
 			border-radius: 5px;
 			z-index: 11;
 			transition: transform 200ms;
+			display: flex;
+			flex-direction: column;
 
 			&:hover {
 				transform: translateY(-15px);
@@ -119,6 +121,10 @@
 
 			.content {
 				padding: 1rem 1.25rem;
+				display: flex;
+				flex-grow: 1;
+				flex-direction: column;
+				justify-content: space-between;
 				user-select: none;
 
 				h3 {
@@ -134,7 +140,7 @@
 				.icons {
 					opacity: 0.8;
 					svg {
-						margin-right: 0.5rem;
+						margin-right: 0.75rem;
 						width: 22px;
 						height: 22px;
 					}
@@ -290,8 +296,10 @@
 
 		.projectGrid {
 			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 1fr;
 			grid-gap: 1rem;
 			.projectCard {
+				height: 100%;
 				// max-width: 250px;
 				.img {
 					height: 175px;
