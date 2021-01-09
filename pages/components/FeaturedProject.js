@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { childrenStaggerDelay } from "./utils/animations/framer-defs";
+import { fadeInUp } from "./utils/animations/framer-defs";
 import useIntersectAnimation from "./hooks/useIntersectAnimation";
 import ProjectCard from "./ProjectCard";
 import Modal from "react-modal";
@@ -31,7 +31,7 @@ export default function FeaturedProject() {
 				initial="hidden"
 				ref={ref}
 				animate={control}
-				variants={childrenStaggerDelay}
+				variants={fadeInUp}
 			>
 				{cardDescriptions.map(({ title, description, icons, id }, idx) => (
 					<ProjectCard
@@ -39,7 +39,6 @@ export default function FeaturedProject() {
 						title={title}
 						description={description}
 						icons={icons}
-						control={control}
 						onClick={() => openModal(id)}
 					/>
 				))}

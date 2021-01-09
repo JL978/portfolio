@@ -1,21 +1,13 @@
 import React from "react";
 import Icon from "./Icon";
-import { motion } from "framer-motion";
 import { fadeInUp } from "./utils/animations/framer-defs";
 
-export default function ProjectCard({
-	title,
-	description,
-	icons,
-	onClick,
-	control,
-}) {
+export default function ProjectCard({ title, description, icons, onClick }) {
 	return (
-		<motion.div
+		<div
 			className="projectCard"
 			onClick={onClick}
 			initial="hidden"
-			animate={control}
 			variants={fadeInUp}
 		>
 			<div className="img"></div>
@@ -28,6 +20,6 @@ export default function ProjectCard({
 					))}
 				</div>
 			</div>
-		</motion.div>
+		</div>
 	);
 }
