@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Icon from "./Icon";
 import projectDescriptions from "./content/modalContent";
+import Image from "next/image";
+import useWindowSize from "./hooks/useWindowSize";
 
 export default function ProjectModal({ closeModal, id }) {
 	const [info, setInfo] = useState({});
@@ -8,13 +10,33 @@ export default function ProjectModal({ closeModal, id }) {
 		setInfo(projectDescriptions[id]);
 	}, [id]);
 
+	const { width } = useWindowSize();
+
 	return (
 		<div className="projectModal">
 			<button onClick={closeModal}>
 				<Icon name="x" />
 			</button>
 			<div className="content">
-				<div className="img"></div>
+				{info.img &&
+					(width > 1100 ? (
+						<Image
+							src={info.img.large}
+							width={872}
+							height={953}
+							layout="responsive"
+							quality={100}
+						/>
+					) : (
+						<Image
+							src={info.img.small}
+							width={1280}
+							height={720}
+							layout="responsive"
+							quality={100}
+						/>
+					))}
+
 				<div className="info">
 					<div className="header">
 						<h3>Featured Project</h3>

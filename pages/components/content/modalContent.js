@@ -13,6 +13,10 @@ const projectDescriptions = {
 			"Music player controls",
 		],
 		tags: ["React", "axios", "Node.js", "Express", "react-router"],
+		img: {
+			large: "/static/img/spotify-lg.gif",
+			small: "/static/img/spotify-sm.gif",
+		},
 	},
 	ttt: {
 		title: "Multiplpayer tic-tac-toe game",
@@ -27,6 +31,10 @@ const projectDescriptions = {
 			"Responsive tic-tac-toe board",
 		],
 		tags: ["React", "socket.io", "Node.js", "react-router"],
+		img: {
+			large: "/static/img/ttt-lg.gif",
+			small: "/static/img/ttt-sm.gif",
+		},
 	},
 	shopify: {
 		title: "Shopify URL generator and shortener*",
@@ -40,6 +48,10 @@ const projectDescriptions = {
 			"Autogenerate shortened link",
 		],
 		tags: ["Next.js", "PostgreSQL", "Formik", "Koa.js"],
+		img: {
+			large: "/static/img/shopify-lg.gif",
+			small: "/static/img/shopify-sm.gif",
+		},
 	},
 };
 

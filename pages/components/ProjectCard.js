@@ -1,16 +1,25 @@
 import React from "react";
+import Image from "next/image";
 import Icon from "./Icon";
-import { fadeInUp } from "./utils/animations/framer-defs";
 
-export default function ProjectCard({ title, description, icons, onClick }) {
+export default function ProjectCard({
+	title,
+	description,
+	icons,
+	onClick,
+	imgSrc,
+}) {
 	return (
-		<div
-			className="projectCard"
-			onClick={onClick}
-			initial="hidden"
-			variants={fadeInUp}
-		>
-			<div className="img"></div>
+		<div className="projectCard" onClick={onClick} initial="hidden">
+			<Image
+				className="img"
+				src={imgSrc}
+				width={1473}
+				height={905}
+				layout="responsive"
+				quality={100}
+			/>
+
 			<div className="content">
 				<h3>{title}</h3>
 				<p>{description}</p>
