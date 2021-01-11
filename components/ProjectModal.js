@@ -25,7 +25,6 @@ export default function ProjectModal({ closeModal, id }) {
 							width={872}
 							height={953}
 							layout="responsive"
-							quality={80}
 							alt={info.imgAlt}
 						/>
 					) : (
@@ -34,10 +33,17 @@ export default function ProjectModal({ closeModal, id }) {
 							width={1280}
 							height={720}
 							layout="responsive"
-							quality={80}
 							alt={info.imgAlt}
 						/>
 					))}
+				{/* {info.img && (
+					<div className="img">
+						<div />
+						<video muted autoplay loop playsinline>
+							<source src="/static/img/spotifydemo.mp4" type="video/mp4" />
+						</video>
+					</div>
+				)} */}
 
 				<div className="info">
 					<div className="header">
