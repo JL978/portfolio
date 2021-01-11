@@ -47,7 +47,7 @@
 	opacity: 0;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (min-height: 400px) {
 	.modal {
 		max-height: calc(100vh - 100px);
 		min-height: 300px;
