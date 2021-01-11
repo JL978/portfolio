@@ -17,7 +17,7 @@ export default function ProjectCard({
 				width={1473}
 				height={905}
 				layout="responsive"
-				quality={100}
+				quality={80}
 			/>
 
 			<div className="content">
