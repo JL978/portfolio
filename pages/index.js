@@ -9,12 +9,17 @@ export default function Home() {
 		<>
 			<Head>
 				<title>Jimmy Lam</title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta
+					name="viewport"
+					content="user-scalable=no, initial-scale=1.0, width=device-width, minimum-scale=1, maximum-scale=1"
+				/>
+				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 				<meta
 					name="description"
 					content="Jimmy Lam is a materials engineer turns self-taught full-stack web developer with emphasis on the front-end stack"
 				/>
+
+				<meta name="apple-mobile-web-app-capable" content="yes" />
 			</Head>
 			<section className="page">
 				<Hero />

@@ -11,15 +11,22 @@
 	scrollbar-width: none; /* Firefox */
 }
 
-html,
-body {
+html {
+	overflow-y: auto;
+	overflow-x: hidden;
 	scroll-behavior: smooth;
+	font-size: 20px;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
 	margin: auto;
 	max-width: $width-max;
 	font-family: $main-font;
 	background: $main-dark;
 	color: $main-light;
-	font-size: 20px;
 }
 
 a {
