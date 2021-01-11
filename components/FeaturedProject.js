@@ -33,16 +33,19 @@ export default function FeaturedProject() {
 				animate={control}
 				variants={fadeInUp}
 			>
-				{cardDescriptions.map(({ title, description, icons, id, img }, idx) => (
-					<ProjectCard
-						key={idx}
-						title={title}
-						description={description}
-						icons={icons}
-						onClick={() => openModal(id)}
-						imgSrc={img}
-					/>
-				))}
+				{cardDescriptions.map(
+					({ title, description, icons, id, img, alt }, idx) => (
+						<ProjectCard
+							key={idx}
+							title={title}
+							description={description}
+							icons={icons}
+							onClick={() => openModal(id)}
+							imgSrc={img}
+							alt={alt}
+						/>
+					)
+				)}
 			</motion.div>
 			<Modal
 				isOpen={modalIsOpen}

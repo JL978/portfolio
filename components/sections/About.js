@@ -76,6 +76,7 @@ export default function About() {
 					height={429}
 					layout="responsive"
 					quality={100}
+					alt="Jimmy Lam"
 				/>
 			</motion.div>
 		</div>

@@ -30,8 +30,10 @@
 	max-width: $width-max;
 
 	h1 {
+		overflow: hidden;
+		white-space: nowrap;
 		user-select: none;
-		font-size: clamp(52px, 17vw, 250px);
+		font-size: clamp(40px, 17vw, 250px);
 		opacity: 5%;
 	}
 }

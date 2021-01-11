@@ -17,6 +17,7 @@ const projectDescriptions = {
 			large: "/static/img/spotify-lg.gif",
 			small: "/static/img/spotify-sm.gif",
 		},
+		imgAlt: "Spotify clone demo",
 		links: [
 			{ type: "external", url: "https://clonedspot.netlify.app/" },
 			{ type: "github", url: "https://github.com/JL978/spotify-clone-client" },
@@ -39,6 +40,7 @@ const projectDescriptions = {
 			large: "/static/img/ttt-lg.gif",
 			small: "/static/img/ttt-sm.gif",
 		},
+		imgAlt: "Tic tac toe demo",
 		links: [
 			{ type: "external", url: "https://react-ttt-app.netlify.app/" },
 			{
@@ -63,6 +65,7 @@ const projectDescriptions = {
 			large: "/static/img/shopify-lg.gif",
 			small: "/static/img/shopify-sm.gif",
 		},
+		imgAlt: "Shopify app demo",
 		links: [{ type: "github", url: "https://github.com/JL978/utm-app" }],
 	},
 };

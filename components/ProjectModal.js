@@ -26,6 +26,7 @@ export default function ProjectModal({ closeModal, id }) {
 							height={953}
 							layout="responsive"
 							quality={80}
+							alt={info.imgAlt}
 						/>
 					) : (
 						<Image
@@ -34,6 +35,7 @@ export default function ProjectModal({ closeModal, id }) {
 							height={720}
 							layout="responsive"
 							quality={80}
+							alt={info.imgAlt}
 						/>
 					))}
 

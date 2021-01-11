@@ -2,10 +2,20 @@ import FeaturedProject from "../components/FeaturedProject";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
+import Head from "next/head";
 
 export default function Home() {
 	return (
 		<>
+			<Head>
+				<title>Jimmy Lam</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta
+					name="description"
+					content="Jimmy Lam is a materials engineer turns self-taught full-stack web developer with emphasis on the front-end stack"
+				/>
+			</Head>
 			<section className="page">
 				<Hero />
 			</section>
@@ -14,21 +24,7 @@ export default function Home() {
 			</section>
 
 			<section className="page page-tall" id="projects">
-				<FeaturedProject
-					title="Spotify Web Player Clone"
-					descriptions={[
-						"My very first full-featured web application. A full clone of the Spotify web music player that I created to teach myself the basics of web application development. The app consumes the official Spotify API",
-						"All features were built from scratch using the create-react-app cli for the frontend and Node.js for the backend",
-					]}
-					features={[
-						"Infinite scroll playlists",
-						"Authentication and authorization",
-						"Music player controls",
-						"Live search",
-					]}
-					tags={["React", "Axios", "Node.js", "Express", "react-router-dom"]}
-					img="/static/img/Authed.gif"
-				/>
+				<FeaturedProject />
 			</section>
 
 			<section className="page" id="contact">

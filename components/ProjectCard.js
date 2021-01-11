@@ -8,6 +8,7 @@ export default function ProjectCard({
 	icons,
 	onClick,
 	imgSrc,
+	alt,
 }) {
 	return (
 		<div className="projectCard" onClick={onClick} initial="hidden">
@@ -18,6 +19,7 @@ export default function ProjectCard({
 				height={905}
 				layout="responsive"
 				quality={80}
+				alt={alt}
 			/>
 
 			<div className="content">
