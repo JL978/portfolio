@@ -1,5 +1,5 @@
 import "../styles/styles.global.scss";
-import PageWrapper from "./components/PageWrapper";
+import PageWrapper from "../components/PageWrapper";
 
 function MyApp({ Component, pageProps }) {
 	return (
