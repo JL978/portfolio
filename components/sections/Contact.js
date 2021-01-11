@@ -78,15 +78,26 @@ export default function Contact() {
 						<Form onSubmit={handleSubmit}>
 							<h2>Leave a message</h2>
 							<ErrorMessage name="name" style={errorStyle} component="div" />
-							<Field type="text" name="name" placeholder="Your name"></Field>
+							<Field
+								type="text"
+								name="name"
+								placeholder="Your name"
+								aria-label="your name"
+							></Field>
 							<ErrorMessage name="email" style={errorStyle} component="div" />
-							<Field type="text" name="email" placeholder="Your email"></Field>
+							<Field
+								type="text"
+								name="email"
+								placeholder="Your email"
+								aria-label="your email"
+							></Field>
 							<ErrorMessage name="message" style={errorStyle} component="div" />
 							<Field
 								type="text"
 								placeholder="Your message"
 								name="message"
 								component="textarea"
+								aria-label="leave a message"
 							></Field>
 							<input
 								type="submit"

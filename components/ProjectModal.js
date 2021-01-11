@@ -46,7 +46,7 @@ export default function ProjectModal({ closeModal, id }) {
 							{info.title}{" "}
 							{info.links &&
 								info.links.map((link, idx) => (
-									<a key={idx} href={link.url}>
+									<a key={idx} href={link.url} rel="noreferrer" target="_blank">
 										<Icon name={link.type} />
 									</a>
 								))}

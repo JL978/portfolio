@@ -31,6 +31,7 @@ export default function About() {
 						<a
 							style={externalLInkStyle}
 							href="https://co2cert.com/"
+							rel="noreferrer"
 							target="_blank"
 						>
 							nanoparticles that turn carbon dioxide into renewable fuels{" "}
@@ -45,6 +46,7 @@ export default function About() {
 						<a
 							style={externalLInkStyle}
 							href="https://github.com/JL978/CO2-Conversion-Plant-Automation"
+							rel="noreferrer"
 							target="_blank"
 						>
 							my first program <Icon name="external" />{" "}
