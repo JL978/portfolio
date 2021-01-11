@@ -10,6 +10,7 @@ import X from "./X";
 import Postgres from "./Postgres";
 import Socket from "./Socket";
 import Graph from "./Graph";
+import External from "./External";
 
 export default function Icon({ name }) {
 	switch (name) {
@@ -35,6 +36,8 @@ export default function Icon({ name }) {
 			return <Socket />;
 		case "graphql":
 			return <Graph />;
+		case "external":
+			return <External />;
 		default:
 			return null;
 	}

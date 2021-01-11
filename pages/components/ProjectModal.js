@@ -40,9 +40,15 @@ export default function ProjectModal({ closeModal, id }) {
 				<div className="info">
 					<div className="header">
 						<h3>Featured Project</h3>
-						<h2>{info.title}</h2>
-						{info.links &&
-							info.links.map((link, idx) => <div key={idx}>{link.title}</div>)}
+						<h2>
+							{info.title}{" "}
+							{info.links &&
+								info.links.map((link, idx) => (
+									<a key={idx} href={link.url}>
+										<Icon name={link.type} />
+									</a>
+								))}
+						</h2>
 					</div>
 
 					{info.descriptions &&

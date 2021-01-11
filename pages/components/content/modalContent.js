@@ -17,6 +17,10 @@ const projectDescriptions = {
 			large: "/static/img/spotify-lg.gif",
 			small: "/static/img/spotify-sm.gif",
 		},
+		links: [
+			{ type: "external", url: "https://clonedspot.netlify.app/" },
+			{ type: "github", url: "https://github.com/JL978/spotify-clone-client" },
+		],
 	},
 	ttt: {
 		title: "Multiplpayer tic-tac-toe game",
@@ -35,6 +39,13 @@ const projectDescriptions = {
 			large: "/static/img/ttt-lg.gif",
 			small: "/static/img/ttt-sm.gif",
 		},
+		links: [
+			{ type: "external", url: "https://react-ttt-app.netlify.app/" },
+			{
+				type: "github",
+				url: "https://github.com/JL978/multiplayer-react-tic-tac-toe",
+			},
+		],
 	},
 	shopify: {
 		title: "Shopify URL generator and shortener*",
@@ -52,6 +63,7 @@ const projectDescriptions = {
 			large: "/static/img/shopify-lg.gif",
 			small: "/static/img/shopify-sm.gif",
 		},
+		links: [{ type: "github", url: "https://github.com/JL978/utm-app" }],
 	},
 };
 
