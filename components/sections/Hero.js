@@ -28,13 +28,15 @@ export default function Hero() {
 					>
 						How?
 					</motion.button>
-					<motion.button
-						variants={fadeInUp}
-						onClick={() => router.push("/#contact")}
-						className="button-secondary"
-					>
-						Contact me
-					</motion.button>
+					<a href="/static/files/resume.pdf" download>
+						<motion.button
+							variants={fadeInUp}
+							// onClick={() => router.push("/#contact")}
+							className="button-secondary"
+						>
+							Resume
+						</motion.button>
+					</a>
 				</motion.div>
 			</div>
 		</div>
