@@ -17,6 +17,16 @@ const projectDescriptions = {
 			large: "/static/img/spotify-lg.gif",
 			small: "/static/img/spotify-sm.gif",
 		},
+		demo: {
+			large: {
+				webm: "/static/demo/spotify-lg.webm",
+				mp4: "/static/demo/spotify-lg.mp4",
+			},
+			small: {
+				webm: "/static/demo/spotify-sm.webm",
+				mp4: "/static/demo/spotify-sm.mp4",
+			},
+		},
 		imgAlt: "Spotify clone demo",
 		links: [
 			{ type: "external", url: "https://clonedspot.netlify.app/" },
@@ -39,6 +49,16 @@ const projectDescriptions = {
 		img: {
 			large: "/static/img/ttt-lg.gif",
 			small: "/static/img/ttt-sm.gif",
+		},
+		demo: {
+			large: {
+				webm: "/static/demo/ttt-lg.webm",
+				mp4: "/static/demo/ttt-lg.mp4",
+			},
+			small: {
+				webm: "/static/demo/ttt-sm.webm",
+				mp4: "/static/demo/ttt-sm.mp4",
+			},
 		},
 		imgAlt: "Tic tac toe demo",
 		links: [
@@ -64,6 +84,16 @@ const projectDescriptions = {
 		img: {
 			large: "/static/img/shopify-lg.gif",
 			small: "/static/img/shopify-sm.gif",
+		},
+		demo: {
+			large: {
+				webm: "/static/demo/shopify-lg.webm",
+				mp4: "/static/demo/shopify-lg.mp4",
+			},
+			small: {
+				webm: "/static/demo/shopify-lg.webm",
+				mp4: "/static/demo/shopify-sm.mp4",
+			},
 		},
 		imgAlt: "Shopify app demo",
 		links: [{ type: "github", url: "https://github.com/JL978/utm-app" }],

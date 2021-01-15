@@ -18,7 +18,7 @@ export default function ProjectModal({ closeModal, id }) {
 				<Icon name="x" />
 			</button>
 			<div className="content">
-				{info.img &&
+				{/* {info.img &&
 					(width > 1100 ? (
 						<Image
 							src={info.img.large}
@@ -35,15 +35,22 @@ export default function ProjectModal({ closeModal, id }) {
 							layout="responsive"
 							alt={info.imgAlt}
 						/>
-					))}
-				{/* {info.img && (
+					))} */}
+				{info.demo && (
 					<div className="img">
-						<div />
-						<video muted autoplay loop playsinline>
-							<source src="/static/img/spotifydemo.mp4" type="video/mp4" />
-						</video>
+						{width > 1100 ? (
+							<video muted autoPlay loop playsInline>
+								<source src={info.demo.large.webm} type="video/webm" />
+								<source src={info.demo.large.mp4} type="video/mp4" />
+							</video>
+						) : (
+							<video muted autoPlay loop playsInline>
+								<source src={info.demo.small.webm} type="video/webm" />
+								<source src={info.demo.small.mp4} type="video/mp4" />
+							</video>
+						)}
 					</div>
-				)} */}
+				)}
 
 				<div className="info">
 					<div className="header">
