@@ -28,7 +28,7 @@ export default function Hero() {
 					>
 						How?
 					</motion.button>
-					<a href="/static/files/JimmyLam_Resume2021.pdf" download>
+					<a href="/static/files/JimmyLam_Resume2022.pdf" download>
 						<motion.button
 							variants={fadeInUp}
 							// onClick={() => router.push("/#contact")}
