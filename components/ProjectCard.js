@@ -7,20 +7,21 @@ export default function ProjectCard({
 	description,
 	icons,
 	onClick,
-	imgSrc,
+	src,
 	alt,
 }) {
 	return (
 		<div className="projectCard" onClick={onClick} initial="hidden">
-			<Image
-				className="img"
-				src={imgSrc}
-				width={1473}
-				height={905}
-				layout="responsive"
-				quality={80}
-				alt={alt}
-			/>
+			<div className="image">
+				<Image
+					src={src}
+					layout="responsive"
+					quality={100}
+					alt={alt}
+					fill
+					style={{ objectFit: "cover" }}
+				/>
+			</div>		
 
 			<div className="content">
 				<h3>{title}</h3>

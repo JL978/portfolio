@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp } from "./utils/animations/framer-defs";
 import useIntersectAnimation from "./hooks/useIntersectAnimation";
@@ -33,19 +32,13 @@ export default function FeaturedProject() {
 				animate={control}
 				variants={fadeInUp}
 			>
-				{cardDescriptions.map(
-					({ title, description, icons, id, img, alt }, idx) => (
+				{cardDescriptions.map(({ id, ...props }) => (
 						<ProjectCard
-							key={idx}
-							title={title}
-							description={description}
-							icons={icons}
+							key={id}
 							onClick={() => openModal(id)}
-							imgSrc={img}
-							alt={alt}
+							{...props}
 						/>
-					)
-				)}
+					))}
 			</motion.div>
 			<Modal
 				isOpen={modalIsOpen}

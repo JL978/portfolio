@@ -53,12 +53,8 @@ export default function Contact() {
 			>
 				<h2>Contacts</h2>
 				<p>
-					I am open to opportunities right now. If you have a project you think
-					I would be a good fit, please don't hesitate to contact me through any
-					one of the following means
+					I am happy to chat through:
 				</p>
-				<h3>Phone</h3>
-				<p>1 (647) 570-2405</p>
 				<h3>Email</h3>
 				<p>JimmyLam045@gmail.com</p>
 			</motion.div>

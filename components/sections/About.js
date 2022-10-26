@@ -21,48 +21,17 @@ export default function About() {
 				variants={fadeInRight}
 			>
 				<h3>about me</h3>
-				<h2>Can you really make web apps out of nanoparticles?</h2>
-				<p>Not really no, sorry for the clickbait title :)</p>
+				<h2>Hi 👋 My Name Is Jimmy</h2>
+				<p>That is me on the right there in a lab coat 😃</p>
 				<p>
-					Although I did go to the University of Toronto for 5 years to be a
-					materials engineer. That includes an year-long internship where I was
-					making{" "}
-					<b>
-						<a
-							style={externalLInkStyle}
-							href="https://co2cert.com/"
-							rel="noreferrer"
-							target="_blank"
-						>
-							nanoparticles that turn carbon dioxide into renewable fuels{" "}
-							<Icon name="external" />
-						</a>
-					</b>
+					In my past life, I was a materials engineer. I have since decided that the lab coat life was not for me and now I am a full-stack web developer.
 				</p>
 				<p>
-					That said, I discovered my love for programming during the very same
-					internship by building{" "}
-					<b>
-						<a
-							style={externalLInkStyle}
-							href="https://github.com/JL978/CO2-Conversion-Plant-Automation"
-							rel="noreferrer"
-							target="_blank"
-						>
-							my first program <Icon name="external" />{" "}
-						</a>
-					</b>
-					and I now dedicate my time self-learning and practicing full-stack web
-					development
-				</p>
-				<p>
-					I believe project-based learning is the fastest way to learn,
-					therefore I have wasted no time building apps using techonolgies such
-					as React, Node.js, Express.js, Socket.io, etc.
+					I am currently working as a software engineer at TXIO, developing financial web and mobile applications. 
 				</p>
 				<a href="#projects">
 					<b>
-						Check out my projects <span>&#x2192;</span>
+						Check out some of my works <span>&#x2192;</span>
 					</b>
 				</a>
 			</motion.div>

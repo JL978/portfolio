@@ -14,7 +14,7 @@ export default function Hero() {
 		<div className="hero">
 			<div className="content">
 				<motion.h1 initial="hidden" animate="visible" variants={fadeInRight}>
-					Making web apps from nanoparticles
+					Making pretty things that lives on the web
 				</motion.h1>
 				<motion.div
 					initial="hidden"
@@ -26,7 +26,7 @@ export default function Hero() {
 						variants={fadeInUp}
 						onClick={() => router.push("/#about")}
 					>
-						How?
+						Who?
 					</motion.button>
 					<a href="/static/files/JimmyLam_Resume2022.pdf" download>
 						<motion.button

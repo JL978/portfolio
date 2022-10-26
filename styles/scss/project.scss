@@ -37,6 +37,7 @@
 				font-size: 1.2em;
 				margin-bottom: 1rem;
 			}
+
 			p {
 				font-size: 0.9rem;
 				margin-bottom: 1.3rem;
@@ -45,6 +46,7 @@
 
 			ul {
 				font-size: 0.9rem;
+
 				li {
 					list-style: circle;
 					margin: 0.5rem 0;
@@ -56,6 +58,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				margin-top: 1.5rem;
+
 				div {
 					margin-bottom: 1rem;
 					opacity: 0.8;
@@ -70,12 +73,13 @@
 			}
 		}
 
-		& > div:first-of-type {
+		&>div:first-of-type {
 			overflow: visible !important;
 		}
 
 		a {
 			opacity: 0.7;
+
 			&:hover {
 				opacity: 1;
 			}
@@ -86,31 +90,13 @@
 		}
 
 		.img {
-			// width: 100%;
-			// height: 200px;
-			// min-height: 250px;
 			background-color: #434343;
 			display: block;
-			// overflow: hidden;
 			position: relative;
 			box-sizing: border-box;
 			margin: 0px;
 
-			// div {
-			// 	display: block;
-			// 	box-sizing: border-box;
-			// 	padding-top: 109.289%;
-			// }
-
 			video {
-				// visibility: visible;
-				// position: absolute;
-				// inset: 0px;
-				// box-sizing: border-box;
-				// padding: 0px;
-				// border: none;
-				// margin: auto;
-				// display: block;
 				width: 100%;
 				height: 100%;
 				object-fit: fill;
@@ -131,61 +117,66 @@
 		opacity: 0.9;
 	}
 
-	.projectGrid {
-		display: grid;
-		align-items: center;
-		justify-items: center;
-		grid-template-columns: 1fr;
-		grid-gap: 2rem;
 
-		.projectCard {
-			max-width: 325px;
-			background-color: $main-dark;
-			box-shadow: -5px 5px 18px 2px #0f0f0f;
-			border-radius: 5px;
-			z-index: 11;
-			transition: transform 200ms;
-			display: flex;
-			flex-direction: column;
+}
 
-			&:hover {
-				transform: translateY(-15px);
-				cursor: pointer;
-				box-shadow: -5px 5px 20px 5px #0f0f0f;
-			}
+.projectGrid {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
+}
 
-			.img {
-				background-color: #848484;
-				height: 150px;
-				border-radius: 5px 5px 0 0;
-			}
+.projectCard {
+	max-width: 325px;
+	background-color: $main-dark;
+	box-shadow: -5px 5px 18px 2px #0f0f0f;
+	border-radius: 5px;
+	z-index: 11;
+	transition: transform 200ms;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
 
-			.content {
-				padding: 1rem 1.25rem;
-				display: flex;
-				flex-grow: 1;
-				flex-direction: column;
-				justify-content: space-between;
-				user-select: none;
+	.image {
+		height: 150px;
+		background-color: #848484;
+		position: relative;
+	}
 
-				h3 {
-					font-size: 0.8rem;
-					margin-bottom: 1rem;
-				}
-				p {
-					font-size: 0.8rem;
-					margin-bottom: 0.9rem;
-					opacity: 0.9;
-				}
+	&:hover {
+		transform: translateY(-15px);
+		cursor: pointer;
+		box-shadow: -5px 5px 20px 5px #0f0f0f;
+	}
 
-				.icons {
-					opacity: 0.8;
-					svg {
-						margin-right: 0.75rem;
-						width: 22px;
-						height: 22px;
-					}
-				}
+	.content {
+		padding: 1rem 1.25rem;
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: space-between;
+		user-select: none;
+
+		h3 {
+			font-size: 0.8rem;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			font-size: 0.8rem;
+			margin-bottom: 0.9rem;
+			opacity: 0.9;
+		}
+
+		.icons {
+			opacity: 0.8;
+
+			svg {
+				margin-right: 0.75rem;
+				width: 22px;
+				height: 22px;
 			}
 		}
 	}
@@ -226,6 +217,7 @@
 		}
 	}
 }
+
 @media only screen and (min-width: 700px) {
 	.project {
 		padding: $header-height 50px;
@@ -234,31 +226,30 @@
 			font-size: 1.5rem;
 			margin-bottom: 1.8rem;
 		}
+	}
 
-		.projectGrid {
-			.projectCard {
-				.img {
-					height: 175px;
-				}
+	.projectCard {
+		.img {
+			height: 175px;
+		}
 
-				.content {
-					padding: 1.25rem 1.5rem;
+		.content {
+			padding: 1.25rem 1.5rem;
 
-					h3 {
-						font-size: 1rem;
-						margin-bottom: 1rem;
-					}
-					p {
-						font-size: 0.9rem;
-						margin-bottom: 0.9rem;
-					}
+			h3 {
+				font-size: 1rem;
+				margin-bottom: 1rem;
+			}
 
-					.icons {
-						svg {
-							width: 25px;
-							height: 25px;
-						}
-					}
+			p {
+				font-size: 0.9rem;
+				margin-bottom: 0.9rem;
+			}
+
+			.icons {
+				svg {
+					width: 25px;
+					height: 25px;
 				}
 			}
 		}
@@ -285,6 +276,7 @@
 					font-size: 1.2em;
 					margin-bottom: 1rem;
 				}
+
 				p {
 					font-size: 0.9rem;
 					margin-bottom: 1.3rem;
@@ -293,6 +285,7 @@
 
 				ul {
 					font-size: 0.9rem;
+
 					li {
 						list-style: circle;
 						margin: 0.5rem 0;
@@ -304,6 +297,7 @@
 					display: flex;
 					flex-wrap: wrap;
 					margin-top: 1.5rem;
+
 					div {
 						margin-bottom: 1rem;
 						opacity: 0.8;
@@ -335,38 +329,39 @@
 			margin-bottom: 1.8rem;
 		}
 
-		.projectGrid {
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: 1fr;
-			grid-gap: 1rem;
-			.projectCard {
-				height: 100%;
-				// max-width: 250px;
-				.img {
-					height: 175px;
-				}
+	}
 
-				.content {
-					padding: 1.25rem 1.5rem;
+	.projectGrid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-gap: 1rem;
 
-					h3 {
-						font-size: 0.9rem;
-						margin-bottom: 1rem;
-						// white-space: nowrap;
-						// overflow: hidden;
-						// text-overflow: ellipsis;
-					}
-					p {
-						font-size: 0.8rem;
-						margin-bottom: 0.9rem;
-					}
+	}
 
-					.icons {
-						svg {
-							width: 25px;
-							height: 25px;
-						}
-					}
+	.projectCard {
+		height: 100%;
+
+		.img {
+			height: 175px;
+		}
+
+		.content {
+			padding: 1.25rem 1.5rem;
+
+			h3 {
+				font-size: 0.9rem;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				font-size: 0.8rem;
+				margin-bottom: 0.9rem;
+			}
+
+			.icons {
+				svg {
+					width: 25px;
+					height: 25px;
 				}
 			}
 		}
@@ -385,6 +380,7 @@
 				grid-column: 1/2;
 				overflow: auto;
 			}
+
 			.img {
 				grid-column: 2/-1;
 			}
@@ -395,28 +391,33 @@
 @media only screen and (min-width: 1200px) {
 	.project {
 		padding: $header-height 100px;
+
 		h2 {
 			font-size: 1.7rem;
 			margin-bottom: 1.9rem;
 		}
 
-		.projectGrid {
-			grid-gap: 2rem;
-			.projectCard {
-				.img {
-					height: 175px;
-				}
+	}
 
-				.content {
-					padding: 1.25rem 1.5rem;
+	.projectGrid {
+		grid-gap: 2rem;
 
-					h3 {
-						font-size: 1rem;
-					}
-					p {
-						font-size: 0.9rem;
-					}
-				}
+	}
+
+	.projectCard {
+		.img {
+			height: 175px;
+		}
+
+		.content {
+			padding: 1.25rem 1.5rem;
+
+			h3 {
+				font-size: 1rem;
+			}
+
+			p {
+				font-size: 0.9rem;
 			}
 		}
 	}
@@ -431,68 +432,3 @@
 		}
 	}
 }
-
-// .project {
-// 	height: 100%;
-// 	padding: $header-height 100px;
-// 	@include mid-flex;
-// 	flex-direction: column;
-
-// 	h2 {
-// 		font-size: 1.75rem;
-// 		margin-bottom: 2.5rem;
-// 		opacity: 0.9;
-// 	}
-
-// 	.projectGrid {
-// 		display: grid;
-// 		align-items: center;
-// 		justify-items: center;
-// 		grid-template-columns: repeat(3, 2fr);
-// 		grid-gap: 2rem;
-
-// 		.projectCard {
-// 			background-color: $main-dark;
-// 			box-shadow: -5px 5px 18px 2px #0f0f0f;
-// 			border-radius: 5px;
-// 			z-index: 11;
-// 			transition: all 200ms;
-
-// 			&:hover {
-// 				transform: translateY(-15px);
-// 				cursor: pointer;
-// 				box-shadow: -5px 5px 20px 5px #0f0f0f;
-// 			}
-
-// 			.img {
-// 				background-color: #848484;
-// 				height: 200px;
-// 				border-radius: 5px 5px 0 0;
-// 			}
-
-// 			.content {
-// 				padding: 1.25rem 1.5rem;
-// 				user-select: none;
-
-// 				h3 {
-// 					font-size: 1rem;
-// 					margin-bottom: 1rem;
-// 				}
-// 				p {
-// 					font-size: 0.9rem;
-// 					margin-bottom: 0.9rem;
-// 					opacity: 0.9;
-// 				}
-
-// 				.icons {
-// 					opacity: 0.8;
-// 					svg {
-// 						margin-right: 0.5rem;
-// 						width: 25px;
-// 						height: 25px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// }
